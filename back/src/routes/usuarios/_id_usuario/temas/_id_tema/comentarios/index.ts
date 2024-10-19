@@ -90,11 +90,10 @@ const commentsRoutes: FastifyPluginAsync = async (
     }
   });
 
-  /*fastify.delete("/:id_comentario", {
+  fastify.delete("/:id_comentario", {
     onRequest: [fastify.verifyJWT, fastify.verifySelfOrAdmin],
     schema: {
       params: Type.Intersect([IdUsuarioSchema, IdTema]),
-      response: { 204: "Deleted successfully" },
       summary: "Borrar un comentario",
       tags: ["comentarios"],
     },
@@ -104,9 +103,9 @@ const commentsRoutes: FastifyPluginAsync = async (
         id_comentario:number
       };
       reply.code(204);
-      return comentariosService.erase(id_tema, id_comentario );
+      return comentariosService.erase(id_tema, id_comentario);
     },
-  });*/
+  });
 
 };
 
