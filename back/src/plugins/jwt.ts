@@ -9,7 +9,7 @@ import { IdTema, Tema } from "../types/tema.js";
 import * as temaService from "../services/temas.js";
 
 const jwtOptions: FastifyJWTOptions = {
-  secret: process.env.JWT_SECRET || "",
+  secret: "MYSUPERSECRET",
 };
 
 export default fp<FastifyJWTOptions>(async (fastify) => {
